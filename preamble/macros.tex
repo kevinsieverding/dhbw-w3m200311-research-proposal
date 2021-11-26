@@ -1,0 +1,18 @@
+%!TeX root=../index.tex
+
+% Wikipedia-style "citation needed" macro
+% \newcommand{\citationneeded}[1][]{\textsuperscript{\color{MaterialBlue} [citation needed: #1]}}
+\newcommand{\citationneeded}{\todo[color=MaterialDeepOrange,size=\footnotesize]{Citation Needed!}}
+
+\AtBeginBibliography{\renewcommand{\multinamedelim}{\addsemicolon\space
+}\renewcommand{\finalnamedelim}{\multinamedelim}} % Semikolon zwischen den Autorennamen
+
+%  APPENDIX
+
+% \newcommand{\listappendicesname}{Anhangsverzeichnis}
+% \newlistof{appendices}{apc}{\listappendicesname}
+% \newcommand{\appendices}[1]{\addcontentsline{apc}{section}{\protect\numberline{\thesection}#1}}
+% \newcommand{\subappendices}[1]{\addcontentsline{apc}{subsection}{\protect\numberline{\thesubsection}#1}}
+% \newcommand{\newappendix}[1]{\section{#1}\appendices{#1}}
+% \newcommand{\newsubappendix}[1]{\subsection{#1}\subappendices{#1}} 
+ 

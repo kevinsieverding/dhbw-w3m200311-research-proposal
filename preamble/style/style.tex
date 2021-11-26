@@ -1,0 +1,13 @@
+%!TeX root=../../document.tex
+
+%  Make \paragraph and \subparagraph behave like small headings
+\RedeclareSectionCommands[
+    beforeskip=-1sp,
+    afterskip=1sp,
+    %indent=0pt
+]{paragraph,subparagraph}
+
+
+\usepackage[
+    automark,
+]{scrlayer-scrpage}

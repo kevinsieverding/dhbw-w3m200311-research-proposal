@@ -1,0 +1,59 @@
+%!TeX root=../../index.tex
+
+\pagenumbering{Roman}
+\pagestyle{plain.scrheadings}
+\setcounter{page}{2}
+
+\onehalfspacing{}
+
+\clearpage
+
+\singlespacing{}
+
+\clearpage
+
+\microtypesetup{protrusion=false}
+
+\tableofcontents
+
+\clearpage
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Anhangverzeichnis}
+% \listofappendices
+
+% \clearpage
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
+
+% \renewcommand\listoflistingscaption{Quelltextverzeichnis}
+% \phantomsection
+% \addcontentsline{toc}{section}{\listoflistingscaption{}}
+\listoflistings
+
+\clearpage
+
+\setlist[description]{leftmargin=!, labelwidth=4em}
+
+\printnoidxglossary[
+		title=Abkürzungsverzeichnis,
+		toctitle=Abkürzungsverzeichnis,
+		type=\acronymtype,
+		sort=nocase,
+		nogroupskip,
+		nopostdot,
+		nonumberlist
+]
+
+\setlist[description]{style=standard}
+
+\microtypesetup{protrusion=true}
+
+\clearpage

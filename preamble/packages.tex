@@ -1,0 +1,77 @@
+%!TeX root=../index.tex
+
+% Basics
+\usepackage{calc}
+
+% Language
+\usepackage[american]{babel}
+
+% Color
+\usepackage[dvipsnames,table,hyperref,fixinclude]{xcolor}
+\usepackage{xcolor-material}
+
+% Graphics
+\usepackage[]{graphicx}
+
+% Links
+% \usepackage{url}
+% \PassOptionsToPackage{hyphens}{url} % The url package is also loaded internally by hyperref. Passing the option the regular way leads to clashing package options.
+\usepackage[breaklinks]{hyperref}
+
+% Bibliographies
+\usepackage[
+    backend=biber,
+    % style=apa,
+    citestyle=authoryear,
+    bibstyle=apa,
+    hyperref=true,
+    giveninits=true,
+    sorting=nyt,
+    sortcites=true,
+    doi=true,
+    isbn=false,
+    eprint=false,
+    date=year,
+    labeldate=year,
+    block=space,
+    bibencoding=auto,
+    maxcitenames=2,
+    mincitenames=1
+]{biblatex}
+
+\DeclareFieldFormat{apacase}{#1} % APA style normally uses sentence case for titles. This makes the titles appear as they are in the bib file
+
+% Math
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+% Code
+% \usepackage{listings}
+\usepackage{minted}
+
+% Formatting
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[autostyle]{csquotes}
+\usepackage[shortcuts]{extdash}
+\usepackage{hyphenat}
+\usepackage[all]{nowidow}
+% \usepackage{tocloft}
+% \usepackage[toc,page]{appendix}
+
+% Figures
+\usepackage{wrapfig}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{float}
+
+% Tables
+\usepackage{tabu}
+
+% Misc
+\usepackage[section]{placeins} % Prevent floats from going over section headings
+\usepackage{blindtext}
+\usepackage[obeyFinal,color=MaterialLightBlue,textsize=tiny]{todonotes}
+\usepackage{layout}
+\usepackage{dirtree}
+\usepackage{scrhack}

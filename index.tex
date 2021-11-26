@@ -1,0 +1,81 @@
+\documentclass[
+	% final,
+	paper=a4,
+	parskip=half,
+	fontsize=12pt,
+	listof=totoc,
+	titlepage,
+	headsepline,
+	footsepline,
+]{scrartcl}
+
+\reversemarginpar{}  % Put margins on inner side (left on onesided)
+
+\usepackage[
+	extendedchars,
+	encoding,
+	multidot,
+	space,
+  % filenameencoding=latin1, % Windows
+  filenameencoding=utf8,   % Linux, OS X
+]{grffile}
+
+\input{preamble/fonts.tex}
+
+\input{preamble/packages.tex}
+
+\input{preamble/macros.tex}
+
+\input{preamble/style/style.tex}
+\input{preamble/style/layout.tex}
+\input{preamble/style/header-footer.tex}
+\input{preamble/style/listings.tex}
+
+\hypersetup{
+  colorlinks=true,
+	filecolor=black,
+	linkcolor=black,
+	citecolor=black,
+	% urlcolor=blue,
+	urlcolor=black, % for print
+  pdfauthor=\author{}
+  pdftitle=\title{}
+  pdfsubject=\subject{}
+  pdfkeywords={}
+  pdfcreator=LaTeX
+}
+
+% - Abbreviations and Acronyms
+\usepackage[
+    acronym,
+    toc
+]{glossaries}
+
+\input{preamble/glossaries.tex}
+
+\makenoidxglossaries{}
+
+\input{preamble/acronyms.tex}
+
+\graphicspath{{images/}}
+\addbibresource{bibliography.bib}
+
+\input{preamble/hyphenation.tex}
+
+\begin{document}
+
+	\include{content/frontmatter/frontmatter}
+
+	\pagenumbering{arabic}
+	\pagestyle{scrheadings}
+	\setcounter{page}{1}
+	% \onehalfspacing{}
+	\setstretch{1.5}
+
+	\include{content/01-introduction}
+
+  % \include{content/appendix/appendix}
+  
+  \include{content/backmatter/backmatter}
+
+\end{document}
