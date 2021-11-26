@@ -13,3 +13,4 @@ __*.*
 *.bcf
 *.toc
 *.aux
+*.synctex.gz
