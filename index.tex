@@ -1,9 +1,11 @@
+% !TeX root = index.tex
+
 \documentclass[
 	% final,
 	paper=a4,
 	parskip=half,
 	fontsize=12pt,
-	listof=totoc,
+	listof=notoc,
 	titlepage,
 	headsepline,
 	footsepline,
@@ -47,8 +49,7 @@
 
 % - Abbreviations and Acronyms
 \usepackage[
-    acronym,
-    toc
+    acronym
 ]{glossaries}
 
 \input{preamble/glossaries.tex}
@@ -57,8 +58,8 @@
 
 \input{preamble/acronyms.tex}
 
-\graphicspath{{images/}}
-\addbibresource{bibliography.bib}
+\graphicspath{{assets/img/}}
+\addbibresource{assets/bibliography.bib}
 
 \input{preamble/hyphenation.tex}
 
