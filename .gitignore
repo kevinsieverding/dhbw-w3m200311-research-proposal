@@ -1,4 +1,8 @@
-__*.*
+# MacOS
+.DS_Store
+
+# LaTeX
+__*
 *.aux
 *.fdb_latexmk
 *.fls
@@ -9,8 +13,13 @@ __*.*
 *.out
 *.aux
 *.run.xml
-*.pdf
 *.bcf
 *.toc
 *.aux
-*.synctex.gz
+*.synctex*
+*.bbl
+*.blg
+
+# Local Output
+*.pdf
+!assets/img/*.pdf
