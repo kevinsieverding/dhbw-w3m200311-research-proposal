@@ -2,6 +2,40 @@
 
 \section{Introduction}\label{sec:introduction}
 
-There exist certain trends in modern application architecture design.
+% Short Intro
 
-\subsection{Structure}
+% Context
+
+The trend away from licensed, on\-/premise enterprise software towards so called \gls{saas} has been going strong for the past decade and shows no sign of stopping.
+This new paradigm---characterized by pay\-/per\-/use business models and software being made available to customers via the internet rather than them having to operate it on their own hardware---also has a profound impact on the design of modern enterprise software.
+\gls{saas} applications need to be always available, need to scale seamlessly according to changes in demand and have to minimize operating cost since it now directly affects the provider's bottom line.
+
+These new requirements have paved the way for new trends in software architecture.
+Modern applications are now comonly composited of multiple, integrated micro\-/services developed by autonomous and independent teams.
+Additionally, while the synchronous, HTTP\-/based mode of communication still dominates the user\-/system communication, asynchronous, message-based approaches have become popular for intra-application communication.
+
+In systems that employ both of these patterns---micro\-/services and message-based communication---messages quickly exceed synchronous HTTP\-/calls in volume.
+As a result, the correct use of messages by the system's individual components becomes paramount to the overall system's availability.
+
+% - Current trends in application development
+%   - software as a service
+%     - availability as top priority
+%     - variable scaling
+%     - low tco
+%   - microservices
+%     - autonomous teams
+%     - distributed development
+%   - message-oriented middleware
+% - Schema Management
+
+% Motivation
+
+% - Literature that describes message-oriented systems seldomly make mention of schema management or schema registry applications
+% - articles that include schema management in their design exclusively refer to the confluent schema registry as a solution
+% - message-oriented systems become more popular and more companies become aware of the advantages of schema management, other schema registry solutions than the confluent schema registry have become available
+
+% Goal
+
+This paper aims to clarify the domain of schema management for newcomers from both academics and the private sector, so that its advantages become more accessible to a wider audience. To achieve this, I analyze the use case and the requirements that a schema registry addresses before I give an account of the solutions currrently available.
+
+% Structure
