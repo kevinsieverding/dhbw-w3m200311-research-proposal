@@ -11,3 +11,7 @@
 \usepackage[
     automark,
 ]{scrlayer-scrpage}
+
+% Use numbers also for level 1 nested enumerations
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
