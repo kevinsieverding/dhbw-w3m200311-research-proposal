@@ -57,5 +57,8 @@
         "pdflatex"
       ]
     }
+  ],
+  "cSpell.words": [
+    "microservices"
   ]
 }

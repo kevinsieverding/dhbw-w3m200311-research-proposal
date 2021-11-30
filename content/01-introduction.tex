@@ -7,22 +7,18 @@
 % Context
 
 The trend away from licensed, on\-/premise enterprise software towards so called \gls{saas} has been going strong for the past decade and shows no sign of stopping.
-This new paradigm---characterized by pay\-/per\-/use business models and provisioning on the provider's rather than the customer's infrastructure---also has a profound impact on the design of modern enterprise software.
+This new paradigm---characterized by pay\-/per\-/use business models and provisioning on the provider's rather than the customer's infrastructure---also has a profound impact on the design of contemporary enterprise software.
 
 Modern applications are commonly composited of multiple, integrated micro\-/services developed by mostly autonomous and independent teams.
 Additionally, while the synchronous, HTTP\-/based mode of communication still dominates the user\-/system communication, asynchronous, message-based approaches have become popular for  inter-application communication.
 
-In systems that employ both of these patterns---micro\-/services and message\-/based communication---messages quickly exceed synchronous HTTP\-/calls in volume.
+In systems that employ both of these patterns---microservices and message\-/based communication---messages may quickly exceed synchronous HTTP\-/calls in volume.
 As a result, the correct use of messages by the system's individual components becomes paramount to the overall system's availability.
 Schema technologies like Apache Avro\footnote{\url{https://avro.apache.org/}}, JSON Schema\footnote{\url{https://json-schema.org/}}, Apache Thrift\footnote{\url{https://thrift.apache.org/}} or Google's Protocol Buffers\footnote{\url{https://developers.google.com/protocol-buffers/}} can be used to establish a shared understanding about a message's payload between publishers and consumers.
-But, how are schemas going to be distributed to message consumers?
-And how can the communication contract represented by schemas be enforced to ensure that publishers will not break it?
-Also, as with any \gls{api}, schemas have to evolve to match changes in the system.
-How can such changes be facilitated while still enforcing the communication contract?
 
-All of these questions belong to the domain of schema management and many projects rely on a dedicated software component to implement these requirements---a so\-/called schema registry.
-The review of related work in section \ref{sec:related-work} reveals gaps in the contemporary literature.
-Namely, (a) that the current use of schema management in research is confined to a relatively small scope (b) that no direct examination of the contemporary problem domain exists and (c) that all works which include schema management as a part of their system design use the Confluent Schema Registry.
+The processes of creating, storing, evaluating and distributing such schemas can be summarized under the term schema management and many projects rely on a dedicated software component to implement these requirements---a so\-/called schema registry.
+The review of related work in Section \ref{sec:related-work} reveals gaps in the contemporary literature.
+Namely, (a) that the current use of schema management in research is confined to a relatively small scope, (b) that no direct examination of the contemporary problem domain exists, and (c) that all works which include schema management as a part of their system design use the Confluent Schema Registry without considering alternatives.
 
 This work aims to shine a light into the little examined domain of schema management to serve as a basis for further study and as a reference for both academic and commercial projects that consider implementing schema management.
 To this end, I plan to address the concerns (b) and (c) by creating a concise definition of schema management, as well as a set of characteristics of schema management solutions which I then use to compare the schema management solutions currently available.
