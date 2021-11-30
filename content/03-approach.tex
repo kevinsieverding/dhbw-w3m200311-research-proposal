@@ -2,18 +2,22 @@
 
 \section{Approach}\label{sec:approach}
 
-The previous section outlined some gaps in the contemporary literature concerning the specific and narrow scope in which schema management is used, the lack of direct examination of the schema management domain as well as the monopoly of the Confluent schema registry.
+The previous section outlined some gaps in the contemporary literature concerning the overly specific and narrow scope in which schema management is used, the lack of direct examination of schema management as well as the apparent monopoly of the Confluent Schema Registry.
 To address these issues, some foundational work is required.
 
 In order to examine the problem domain of schema management directly, it needs to be clearly defined.
 Since the only definitions of a schema registry in the literature are over ten years old \parencites(see)(){heery_metadata_2003}{ma_iip_2010}{kreps_kafka_2011} they might not reflect the current situation accurately.
 Therefore, a new definition of schema management is required.
-Such a definition can be deduced from the manifestations of schema management in the contemporary literature, by analyzing the the use cases that are addressed by schema management in these works and by refining characteristics of schema management solutions.
-These findings can then be compared to the descriptions of previous research to identify any gaps which may be addressed to improve the results.
+Such a definition can be deduced from the manifestations of schema management in the contemporary literature.
+By analyzing the use cases that are addressed by schema management in these works and by refining characteristics of schema management solutions.
+These findings can then be compared to the descriptions from previous research to identify any gaps which may be addressed to improve the results.
 
 To present a detailed overview of the alternatives to the Confluent Schema Registry the available schema management solutions need to be surveyed and compared according to the characteristics which result from the previous step.
-The deduced Definition of schema management can be used here to clearly identify which solutions belong to the domain and which do not.
+The deduced definition of schema management can be used here to clearly identify which solutions belong to the domain and which do not.
 
-These results provide transparency for the domain of schema management by providing a clear definition of its scope and identifying and comparing available solutions.
+These results provide transparency for the domain of schema management by providing a clear definition of its scope as well as by identifying and comparing available solutions.
 They can serve as a basis for deciding which schema management solution to pick for a new project as well as for further research into the domain of schema management itself.
-One possible object of such research is the first issue mentioned above, since evaluation how these findings would transfer to projects which do not use Apache Kafka is beyond the scope of this work.
+
+One possible object of such further research would be the first issue mentioned above.
+Evaluating whether the findings of this work are transferable to other system architectures which do not rely on Apache Kafka or not even on \gls{mom} would be a promising way of broadening the scope in which schema management is applied.
+Yet, such an evaluation would almost certainly exceed the scope of the proposed work by a lot.
