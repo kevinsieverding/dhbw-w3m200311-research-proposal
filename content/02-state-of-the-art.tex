@@ -1,3 +1,10 @@
 % !TeX root = ../index.tex
 
-\section{State of the Art}
+\section{Related Work}\label{sec:related-work}
+
+\begin{itemize}
+  \item First mentions of schemas in early 2000s in concert with the \enquote{Semantic Web}. \parencites{heery_metadata_2003}{dogac_semantically_2004}{li_semantic_2004}{crapo_semantically_2009}
+  \item Around 2010 the coverage slowly dies down. Special mention to \cite{ma_iip_2010}, who offer the only concise definition of a Schema Registry that I could find.
+  \item After the seminal paper \cite{kreps_kafka_2011} where they introduce Apache Kafka and also mention the schema registry, several papers can be found that describe various systems which employ Apache Kafka in accordance with a Schema Registry which is only sometimes clearly identified as the Confluent Schema Registry but can be assumed to be the same. \parencites{muller_iot_2017}{radchenko_micro-workflows_2018}{ranjan_radar-base_2019}{holom_metadata_2020}
+  \item Results: Confluent Schema Registry is the de-facto standard in literature \todo[]{See if there are similar findings for the private sector. E.g. Google search statistics.} even though there are alternatives today. It is also missing a concise and up-to-date definition of Schema Management and Schema Registries.
+\end{itemize}
