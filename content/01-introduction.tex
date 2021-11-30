@@ -8,9 +8,7 @@
 
 The trend away from licensed, on\-/premise enterprise software towards so called \gls{saas} has been going strong for the past decade and shows no sign of stopping.
 This new paradigm---characterized by pay\-/per\-/use business models and provisioning on the provider's rather than the customer's infrastructure---also has a profound impact on the design of modern enterprise software.
-\gls{saas} applications need to be always available, need to scale seamlessly according to changes in demand and have to minimize operating cost since it now directly affects the provider's bottom line.
 
-These new requirements have paved the way for new trends in software architecture.
 Modern applications are now commonly composited of multiple, integrated micro\-/services developed by mostly autonomous and independent teams.
 Additionally, while the synchronous, HTTP\-/based mode of communication still dominates the user\-/system communication, asynchronous, message-based approaches have become popular for intra-application communication.
 
@@ -22,28 +20,9 @@ And how can the communication contract represented by schemas be enforced to ens
 Also, as with any \gls{api}, schemas have to evolve to match changes in the system.
 How can such changes be facilitated while still enforcing the communication contract?
 
-All of these questions belong to the domain of Schema Management and many projects rely on a dedicated software component to implement the requirements of Schema Management---a so\-/called Schema Registry.
+All of these questions belong to the domain of schema management and many projects rely on a dedicated software component to implement the requirements of schema management---a so\-/called schema registry.
+The work that is reviewed in section \ref{sec:related-work} reveals gaps in the contemporary literature.
+Namely, (a) that the current use of schema management in research is confined to a relatively small scope (b) that no direct examination of the contemporary problem domain of schema management exists and (c) that all works which include schema management as part of their system design use the Confluent Schema Registry.
 
-
-% - Current trends in application development
-%   - software as a service
-%     - availability as top priority
-%     - variable scaling
-%     - low tco
-%   - microservices
-%     - autonomous teams
-%     - distributed development
-%   - message-oriented middleware
-% - Schema Management
-
-% Motivation
-
-% - Literature that describes message-oriented systems seldomly make mention of schema management or schema registry applications
-% - articles that include schema management in their design exclusively refer to the confluent schema registry as a solution
-% - message-oriented systems become more popular and more companies become aware of the advantages of schema management, other schema registry solutions than the confluent schema registry have become available
-
-% Goal
-
-This paper aims to clarify the domain of schema management for newcomers from both academics and the private sector, so that its advantages become more accessible to a wider audience. To achieve this, I analyze the use case and the requirements that a schema registry addresses before I give an account of the solutions currently available.
-
-% Structure
+This work aims to shine a light into the little examined domain of schema management to serve as a basis for further study and as a reference for both academic and commercial projects that consider implementing schema management.
+To this end, I plan to address the concerns (b) and (c) by creating a concise definition of schema management, as well as a set of characteristics of schema management solutions which I then use to compare the schema management solutions currently available.
