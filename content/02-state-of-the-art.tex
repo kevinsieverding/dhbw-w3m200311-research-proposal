@@ -2,9 +2,36 @@
 
 \section{Related Work}\label{sec:related-work}
 
-\begin{itemize}
-  \item First mentions of schemas in early 2000s in concert with the \enquote{Semantic Web}. \parencites{heery_metadata_2003}{dogac_semantically_2004}{li_semantic_2004}{crapo_semantically_2009}
-  \item Around 2010 the coverage slowly dies down. Special mention to \cite{ma_iip_2010}, who offer the only concise definition of a Schema Registry that I could find.
-  \item After the seminal paper \cite{kreps_kafka_2011} where they introduce Apache Kafka and also mention the schema registry, several papers can be found that describe various systems which employ Apache Kafka in accordance with a Schema Registry which is only sometimes clearly identified as the Confluent Schema Registry but can be assumed to be the same. \parencites{muller_iot_2017}{radchenko_micro-workflows_2018}{ranjan_radar-base_2019}{holom_metadata_2020}
-  \item Results: Confluent Schema Registry is the de-facto standard in literature \todo[]{See if there are similar findings for the private sector. E.g. Google search statistics.} even though there are alternatives today. It is also missing a concise and up-to-date definition of Schema Management and Schema Registries.
-\end{itemize}
+First mentions of the use of schemas for inter-application communication in academic literature can be found in the early 2000s.
+The a considerable subset of the research conducted in this era has a strong focus on using schemas to not only achieve syntactic but also \emph{semantic} interoperability by trying to model a domain's semantics as machine-readable ontologies.
+These efforts can be considered a part of the larger push towards the so\-/called \enquote{Semantic Web}---the vision for an internet of interlinked, machine-readable data---which mainly took place in that era \parencite{noauthor_semantic_nodate}.
+
+\cite{dogac_semantically_2004}, for example, describe a way of extending web services in the travel industry with semantics by employing the \gls{owl} and \gls{xml} schemas that are already defined by an industry consortium.
+Furthermore, \cite{crapo_semantically_2009} attempt to apply Semantic Web technologies in the context of creating a more intelligent power grid---termed the \enquote{Smart Grid}---which can be considered an early \gls{iot} use case. They also rely on the \gls{owl} in that context.
+Finally, \cite{heery_metadata_2003} describe their implementation of a registry for semantic schemas in \gls{owl} and \gls{rdf} formats.
+
+As to research which does not concern itself with semantic modeling, \cite{duftler_web_2001} describes an interface modeling language based on the \gls{wsdl} that is supposed to hide details of underlying technologies such as SOAP.
+Also, \cite{do_matching_2007} present a generic system for matching complex \gls{xml} schemas.
+
+To summarize, early research around schemas often aimed beyond the syntactic interoperability of applications as part of a larger push for the Semantic Web.
+Yet, all of them have the underlying goal of improving the integration of independent and autonomous applications in a distributed system.
+Additionally, \cites{duftler_web_2001}{dogac_semantically_2004}{li_semantic_2004}{crapo_semantically_2009} mention the exchange of messages, though non except for \cite{li_semantic_2004} do so in concert with \gls{mom}.
+
+Coincidental with the Semantic Web's loss in popularity in the late 2000s, research concerning schemas dies down around that time.
+A notable exception is \cite{ma_iip_2010}, which presents a generic event\-/based platform for Intelligent Transportation Systems.
+In the course of laying out their design, they provide a definition of an event schema registry \parencite[see][p.~3]{ma_iip_2010}.
+
+Not much later, \cite{kreps_kafka_2011} introduce their new open\-/source event streaming platform Kafka---which can be considered a form of \gls{mom}---and also make mention of a schema registry for managing and distributing Apache Avro schemas.
+Following Kafka's introduction to the Apache project and its following rise in popularity for \gls{mom} use cases, mentions of a schema registry almost exclusively occur in research that describes various system designs using Apache Kafka.
+\cites{muller_iot_2017}{radchenko_micro-workflows_2018}{ranjan_radar-base_2019} do so in the context of \gls{iot}, whereas \cite{g_b_high_2021} present a generic \gls{mom} that combines Apache Kafka, a schema registry and Apache Camel.
+In addition to the above mentioned papers, the theses \cites{dessalegn_muruts_multi-tenant_2016}{auer_distributed_2017}{korhonen_using_2019} also describe system designs using Apache Kafka and a schema registry.
+
+Of these works, \cites{muller_iot_2017}{radchenko_micro-workflows_2018}{dessalegn_muruts_multi-tenant_2016}{auer_distributed_2017}{korhonen_using_2019} explicitly name the schema registry which they use as the Confluent Schema Registry which was initially presented by \cite{kreps_kafka_2011}.
+\cites{ranjan_radar-base_2019}{g_b_high_2021} do not specify which schema registry they use, but it is safe to assume that it is the Confluent Schema Registry as well, since the former makes numerous references to the \enquote{Confluent Platform} and the latter's description of the registry's functionality matches closely with the Confluent Schema Registry.
+
+To summarize, contemporary research which mentions schema management and schema management solutions in the form of a schema registry exclusively does so in the context of system designs using Apache Kafka.
+Furthermore, the Confluent Schema Registry appears to the the de\-/facto standard for these use cases.
+
+These findings offer the question whether the relevance of schemas and schema management for contemporary information systems is really reduced to the Apache Kafka ecosystem as the progressively narrowing ambitions of research in the last 20 years seems to indicate.
+In the contemporary works referenced above, schema management is treated as a minor concern and not as main object of study, which begs the question whether this might constitute a gap in the research, since the use of schema management solutions obviously indicates some relevance.
+Additionally, all system designs in contemporary literature appear to default to the Confluent Schema Registry, which begs the question if there might be alternatives that are more suitable---at least for certain use cases.
